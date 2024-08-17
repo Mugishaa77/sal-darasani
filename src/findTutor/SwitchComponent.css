@@ -1,0 +1,50 @@
+.switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    color: var(--darasani-dark);
+    background-color: var(--darasani-background);
+    padding: 5px;
+    width: 70%;
+    border: none;
+    border-top: 3px solid var(--darasani-dark);
+
+}
+
+.switch-tab {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+        /* Add color transition */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch-tab.active {
+    background-color: white;
+    color: var(--spaceapp-green);
+    border-bottom: 1px solid var(--spaceapp-green);
+}
+
+.switch-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+   width: 50%;
+    background-color: white;
+    transition: transform 0.3s ease;
+    z-index: -1;
+        /* Ensure the slider is positioned behind the text */
+}
+
+.switch-slider.unread {
+    transform: translateX(100%);
+}

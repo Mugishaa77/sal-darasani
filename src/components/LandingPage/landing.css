@@ -1,0 +1,219 @@
+/* Landing css */
+/* navbar */
+.button-auth {
+  min-width: 120px;
+  position: relative;
+  cursor: pointer;
+  padding: 8px 17px;
+  border: 0;
+  border-radius: 7px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  background: radial-gradient(ellipse at bottom,
+      rgba(71, 81, 92, 1) 0%,
+      rgba(11, 21, 30, 1) 45%);
+  color: rgb(255, 255, 255, 0.66);
+  transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+.button-auth::before {
+  content: "";
+  width: 70%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  opacity: 0.2;
+  transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+.button-auth:hover {
+  color: rgb(255, 255, 255, 1);
+  transform: scale(1.05) translateY(-3px);
+}
+.button-auth:hover::before {
+  opacity: 1;
+}
+.user-auth {
+  display: flex;
+  align-items: center;
+}
+.user-icon {
+  display: none;
+}
+.button-auth {
+  display: block;
+}
+
+.user-svg {
+  width: 30px;
+  height: 30px;
+  fill: #333;
+}
+
+@media (max-width: 1051px) {
+  .user-auth {
+    display: none;
+  }
+  .user-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1052px) {
+  .user-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 951px) {
+  .nav-links,
+  .user-auth,
+  .user-icon {
+    display: none;
+  }
+  .bars-icon {
+    display: block;
+  }
+}
+
+@media (min-width: 952px) and (max-width: 1051px) {
+  .bars-icon {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+  }
+  .user-auth {
+    display: none;
+  }
+  .user-icon {
+    display: block;
+  }
+}
+
+@media (min-width: 1052px) {
+  .bars-icon {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+  }
+  .user-auth {
+    display: flex;
+  }
+  .user-icon {
+    display: none;
+  }
+}
+
+/* hero.css */
+.hero-section{
+    width: 100%;
+    height: 100vh;
+    background-color: #e2dcdc;
+    background-image: url('./../../pictures/wave4.png');
+}
+.hero-h1{
+    line-height: 1.1;
+}
+
+@media (max-width:640px) {
+  .hero-section-wrapper{
+    display: block;
+    flex-direction: row-reverse;
+  }
+}
+
+/* Partners.css */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-slide {
+    animation: slide 30s linear infinite;
+}
+
+
+
+/* Join Org */
+.join-img{
+    border-radius: 56% 25% 75% 25% / 28% 73% 16% 72%;
+}
+
+@media (max-width: 640px) {
+    .joinorg-wrapper {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+    }
+    .img-holder {
+      display: none;
+    }
+    .joinorg-wrapper::before {
+      content: '';
+      background-image: url('./../../pictures/bg-1.jpg');
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+    }
+  
+    .joinorg-wrapper::after {
+      content: '';
+      background-color: rgba(211, 211, 211, 0.1); 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+  
+    .joinorg-content-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .content-card{
+        width: 400px;
+        margin: 10px auto;
+    }
+  }
+
+  /* footer responsiveness */
+  @media (max-width: 640px) {
+    .footer-wrapper{
+        margin: 20px 40px;
+    }
+    .abt-container img{
+        width: 200px;
+    }
+    .contact-box, .social-media, .sitemap{
+      margin-top: 20px;
+    }
+  }
+
+  /* about responsiveness */
+  @media (max-width: 800px) {
+    .service-card-container{
+      display: block;
+    }
+    .service-card{
+      margin: 20px auto;
+      min-width: 400px;
+      font-size: 16px;
+    }
+  }
