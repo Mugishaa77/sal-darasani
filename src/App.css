@@ -4,7 +4,8 @@
   --darasani-blue: #60C5FF;
     --darasani-background: #EFF9FF;
     --darasani-dark: #344862;
-    --lighter-grey: '#e5e7eb';
+    --darasani-dark: #05013B;
+    --lighter-grey: #e5e7eb;
     --black: #000000;
     --background-grey: #FAFAFA;
     --button-grey: #737373;
@@ -166,81 +167,6 @@
   font-family: "Lusitana", serif;
   font-weight: 700;
   font-style: normal;
-}
-
-
-/* Navbar */
-
-
-.logo a:hover {
-  box-shadow: 0 4px 8px var(--darasani-blue)!important;
-    transform: translateY(-2px)!important;
-}
-
- /* Hamburger Menu Styles */
- .menu-toggle {
-  display: none;
-  /* Hide by default for larger screens */
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: var(--darasani-blue);
-  margin: 4px 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  text-decoration: none; /* Ensure it stays without underline on hover */
-}
-
- /* styles.css */
-      
- .dd {
-  display: flex;
-  flex-direction: row;
- }
-
- .dd svg {
-  margin-top: 0.5rem;
-  margin-left: 1px;
- }
-
- .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-items {
-  display: none;
-  position: absolute;
-  color: var(--darasani-blue);
-  background-color: #E7EBEF;
-  min-width: 140px;
-  z-index: 1;
-  margin: 0.5rem;
-  margin-top:0;
-  padding: 0.5rem;
-  border-radius: 5px;
-}
-
-
-.dropdown-items li:hover {
-  background-color: var(--darasani-blue);
-  color: var(--darasani-dark);
-}
-.dropdown:hover .dropdown-items {
-  display: block;
-}
-
-.ds-footer {
-  color: var(--darasani-dark);
-  
 }
 
 /* Find a Tutor */
@@ -456,10 +382,6 @@ font-weight: lighter;
  
 }
 
-
-.pool
-
-
 /* Search Filter */
 .search-filter {
   padding: 1rem;
@@ -532,9 +454,6 @@ font-weight: lighter;
 
 
 /* .tutorcard-list */
-.tutor {
-  
-}
 
 .tutor .card {
   padding: 5px;
@@ -745,6 +664,16 @@ padding-top: 1rem;
   
 }
 
+.spec {
+  font-size: 21px;
+  color: var(--darasani-dark);
+  opacity: 0.9;
+  padding: 1rem;
+  padding-top: 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
 
 .feedback-form label {
   padding: 1rem;
@@ -791,6 +720,197 @@ margin-right: 1rem;;
   padding-bottom: 0;
  }
 
+ /* Responsive */
+ @media (max-width: 700px) {
+    .find {
+      padding-top: 60px;
+    }
+
+    .find h2 {
+     font-size: 35px;
+    }
+
+    .find .incentives {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .find .incentives .img {
+      height: 200px;
+      width: auto;
+    }
+
+    .pool {
+      padding: 0;
+    }
+
+    .pool .pool-intro {
+      display: flex;
+      flex-direction: column-reverse;     
+      
+    }
+
+    .pool-one {
+      margin: 0;
+    }
+
+    .pool-one ul {
+      margin: 0;
+      margin-left: 1rem;
+    }
+
+    .pool-two img {
+      width: 320px;
+      height: 320px;
+    }
+
+    .search-filter-container {
+      margin: 5px;
+      
+    }
+   
+    .tutor-search-form {
+      padding: 2rem;
+
+    }
+
+  .tutorcard-list {
+    flex-direction: column;
+    
+  }
+
+  .tutorcard-list {
+    flex-direction: column;
+  }
+
+  .tutor {
+    padding: 1rem;
+    margin: 0;
+    
+  }
+
+  .tutor .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    border: 1px solid var(--darasani-background);
+    padding: 1rem;
+    box-shadow: -2px -2px 8px 
+    lightgray;
+    margin: 1rem;
+    
+  }
+
+  .tutorcard-list {
+    margin: 0;
+  }
+
+  .tutor .card img {
+    width: 80px;
+    height: 80px;
+    margin: 0 10px 0 0;
+    border-radius: 50%;
+  }
+
+  .card-body {
+    padding: 1 rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .card-body h5 {
+    font-size: 18px;
+  }
+
+  .card-body p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .subjects-taught {
+    display: none;
+  }
+
+  .card-body a {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    color: var(--darasani-blue);
+  }
+
+  .feedback {
+    margin: 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: -1px 1px 5px 
+    var(--lighter-grey);
+  }
+
+  .feedback h1 {
+    display: none;
+  }
+
+  .feedback-incentive p {
+    text-align: center;
+    padding: 1rem;
+    color: var(--darasani-dark);
+    font-weight: 500;
+    
+    
+  
+  }
+
+  .feedback-incentive h4 {
+     display: none;
+  }
+
+  .feedback-img {
+    padding: 0;
+    margin: 0;
+  }
+
+  .feedback-img img {
+    padding: 0;
+    margin: 0 auto;
+    height: 250px;
+width: 250px;
+  }
+
+  .feedback-incentive ul {
+    display: none;
+  }
+
+  .feedback h3 {
+    opacity: 0.9;
+    color: var(--button-grey);
+
+  }
+
+  .feedback-content {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .feedback-img {
+    padding: 0;
+  }
+
+  .feedback h5 {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .feedback-form label {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+  }
+ }
 /* Become a Tutor */
 .become-a-tutor {
   background-color: white;
@@ -1081,3 +1201,108 @@ h3 {
     padding-left: 20px;
 }
 
+/* Responsive */
+@media (max-width: 700px) {
+  .become-a-tutor {
+    padding-top: 50px;
+    
+  }
+
+  .become-a-tutor h2 {
+    font-size: 36px;
+  }
+
+  .value-proposition {
+    font-size: 22px;
+    padding: 0;
+    text-align: center;
+ 
+  
+  }
+
+  .value-proposition .spec {
+   display: none;
+  
+  }
+  
+
+  .steps ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .steps ul li {
+    margin: 0.5rem;
+    background-color: none;
+  }
+
+  .steps ul li span {
+    font-size: 12px;
+   padding: 7px;
+
+  }
+
+  .become-top h3 {
+    padding: 0;
+  }
+
+  .fact-check {
+    display: none;
+  }
+
+
+  .become-top img {
+    padding: 0;
+
+  }
+
+  .tick {
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  .become-top ul  {
+    font-size: 16px;
+  }
+
+  .waiting-list-form h4 {
+    padding: 1rem;
+
+  }
+
+  .form-badge {
+    height: 160px;
+    width: 160px;
+  }
+
+  .waiting-list-form form {
+    width: 90%;
+  }
+
+  .extraa h3 {
+    text-align: left;
+    color: var(--window-blue);
+    font-weight: 500;
+    text-decoration: underline;
+    
+  }
+
+  .compensation-details p ,
+  .support-resources p {
+    color: var(--button-grey)!important;
+    line-height: 1.4rem;
+  }
+  
+  .trust-signals p {
+    color: var(--darasani-dark);
+    text-align: center;
+   
+   
+    
+  }
+  
+
+}

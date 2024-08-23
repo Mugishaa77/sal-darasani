@@ -1,15 +1,10 @@
 import React from "react";
-import { AiOutlineCloseCircle } from 'react-icons/ai'
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 
 function Modal ({ isOpen, onClose, children }) {
   return (
-    <div
-      className={`fixed inset-0 flex items-center justify-center z-50 ${
-        isOpen ? "" : "hidden"
-      }`}
-    >
+    <div className={`fixed inset-0 flex items-center justify-center z-50 ${isOpen ? "" : "hidden"}`}>
       <div className="modal-overlay absolute w-full h-full bg-gray-900 opacity-50" />
-
       <div className="modal-container bg-white w-[300px] md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto items-center">
           <div className="text-right mt-[10px] mr-5 mb-2">
             <button

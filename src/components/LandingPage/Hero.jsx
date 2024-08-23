@@ -17,8 +17,7 @@ function Hero() {
            <div className="hero-section-wrapper flex mx-[30px] mt-[12%] ">
                 <div className="text-left text-dark-bg w-full md:w-1/2 px-4 md:px-0">
                     <h1 className=" hero-h1 text-5xl md:text-[55px] font-bold">Get connected to the best tutors, <br />anytime, anywhere, for free!</h1>
-                    <p className="w-[90%] text-[10px] italic md:text-xl mt-[40px] font-playfair text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet 
-                        consectetur adipisicing elit.Lorem adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p className="w-[90%] text-[10px] italic md:text-xl mt-[40px] font-playfair text-justify">Unlock Your Potential with Expert Guidance, Anytime, Anywhere. Join us and experience personalized learning that fits your schedule and budget.</p>
                 </div>
                 <img src={heroimg} alt="" className="hero-img mt-[-110px] w-[400px] h-auto ml-[100px]" />
             </div>
