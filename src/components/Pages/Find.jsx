@@ -4,7 +4,10 @@ import NeedsThree from '../../pictures/needs_three.jpeg';
 import NeedsFour from '../../pictures/needs_four.jpeg';
 import TutorSearchForm from '../../findTutor/TutorSearchForm';
 import TutorPool from '../../findTutor/TutorPool';
-import Feedback from '../..//findTutor/Feedback';
+import Feedback from '../../findTutor/Feedback';
+import Winning from '../../pictures/winning.jpg';
+import Personalized from '../../pictures/personalized.jpeg';
+import Search from '../../pictures/find.jpeg';
 
 export default function Find() {
 
@@ -24,19 +27,19 @@ export default function Find() {
                  */}
 
                 <div className="incentive-item">
-                    <img src={NeedsThree} alt="Search for Tutors" className="mb-3 mx-auto" />
+                    <img src={Search} alt="Search for Tutors" className="mb-3 mx-auto" />
                     <figcaption className="text-lg font-semibold">1.Find the Perfect Match</figcaption>
                     <p  className="text-sm text-gray-600">Use our advanced search tools to connect with tutors who are perfect for you.</p>
                 </div>
 
                 <div className="incentive-item">
-                    <img src={NeedsTwo} alt="Get Connected with Tutors" className="mb-3 mx-auto" />
+                    <img src={Personalized} alt="Get Connected with Tutors" className="mb-3 mx-auto" />
                     <figcaption className="text-lg font-semibold">2.Connect with Top Tutors</figcaption>
                     <p  className="text-sm text-gray-600">Get connected with experienced tutors who are ready to help you succeed.</p>
                 </div>
 
                 <div className="incentive-item">
-                    <img src={NeedsFour} alt="Improve Your Grades" className="mb-3 mx-auto" />
+                    <img src={Winning} alt="Improve Your Grades" className="mb-3 mx-auto" />
                     <figcaption className="text-lg font-semibold">3.Boost Your Grades Effortlessly</figcaption>
                     <p  className="text-sm text-gray-600">Achieve better results with personalized tutoring designed to fit your learning style.</p>
                 </div>

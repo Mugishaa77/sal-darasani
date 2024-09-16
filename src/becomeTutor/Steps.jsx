@@ -8,10 +8,11 @@ export default function Steps () {
             Become part of a thriving community of educators.
              At Darasani Hub, we provide the tools and support you need to succeed as a tutor. 
         <br/>      
-      <strong className="spec">
+        <strong className="spec">
         We Specialize in:
       </strong>
             </p>  
+          
            
            
            

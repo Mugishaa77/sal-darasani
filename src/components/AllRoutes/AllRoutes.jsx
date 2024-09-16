@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react'
 import { Routes, Route } from "react-router-dom";
 import HomePage from '../LandingPage/HomePage'
@@ -25,4 +23,3 @@ function AllRoutes() {
 }
 
 export default AllRoutes
->>>>>>> bb3c73ecb1dc12de374cc8afa039b298bbe87e30

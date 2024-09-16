@@ -1,4 +1,5 @@
 import Tutor from '../pictures/best.png'
+import '../App.css';
 
 export default function RegForm () {
     return (

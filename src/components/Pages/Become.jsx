@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import WhyDarasani from '../../becomeTutor/WhyDarasani';
-import Steps from './../../becomeTutor/Steps';
 import RegForm from '../../becomeTutor/RegForm';
+import Inclusivity from '../../becomeTutor/Inclusivity';
+import Diversity from '../../becomeTutor/Diversity';
 
 export default function Become() {
         // State to manage the visibility of each section
@@ -44,23 +44,27 @@ export default function Become() {
       
     return (
         <div className="become-a-tutor">
-            <h2 className="hero-h1 text-5xl md:text-[35px] font-bold">
-                Join Darasani as a Tutor Today!
-            </h2>
            
+           <h2 className="hero-h1 text-5xl md:text-[35px] font-bold">
+           Join Us in Empowering Students with Special Needs!
+            </h2>   
               
-            <div>
-                    <Steps />
-                </div>
-            <div >
-                            
-                    <WhyDarasani />
-                
-            </div>
+          
+             
+            <Inclusivity /> 
+
+            <Diversity />  
+
+             {/*<div className="convince">
+           <p className="lusitana-regular">
+            By becoming a tutor on our platform, you will play a vital role in helping students 
+            unlock their full potential and succeed academically.
+            </p>
+            </div>  */}
+
             
-    
             <div>
-                <RegForm />
+                              <RegForm />
             </div>
     
             <div className="extraa lusitana-regular">

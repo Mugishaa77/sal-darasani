@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import logo from './../../pictures/logo-1.png'
+import logo from './../../pictures/darasani.png';
 import { useNavigate, Link } from "react-router-dom";
-import { PiEyeBold, PiEyeClosed} from 'react-icons/pi';
-// import './Login.css'
+import { PiEyeBold, PiEyeClosed } from 'react-icons/pi';
 
 function TutorSignUp() {
   const navigate = useNavigate();
@@ -10,8 +9,9 @@ function TutorSignUp() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [username, setUsername] = useState(""); 
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState(""); 
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
@@ -35,7 +35,8 @@ function TutorSignUp() {
             email,
             password,
             first_name: firstName,
-            last_name: lastName,  
+            last_name: lastName,
+            username, 
             phone_number: phoneNumber
           }),          
           headers: {
@@ -63,120 +64,79 @@ function TutorSignUp() {
 
   return (
     <>
-      <p>{errMsg}</p>
+      <p className="text-red-500 text-center">{errMsg}</p>
 
-      <div className="bg-gradient-to-r from-blue-500 via-purple-700 to-purple-500 h-screen flex justify-center items-center">
-        <div className="signup-container flex justify-center items-center w-[1000px] h-[90vh] p-20 bg-gradient-to-tr from-[rgba(255,255,255,0.1)] via-transparent via-transparent to-[rgba(255,255,255,0)] backdrop-blur-10xl border-1 border-[rgba(255,255,255,0.18)] shadow-md rounded-lg">
-          <div className="w-80 h-[80%] mr-20 flex flex-col items-center mt-[200px]">
-            <Link to={"/"} className="app-name font-bold text-3xl text-text-color">Darasani Hub</Link>
-            <img src={logo} alt="" className="w-[550px]"/>
-          </div>
-          <div className="w-96 p-8  ml-20 mt-[5px] w-[500px]">
-              <h5 className="text-5xl font-medium mb-4 text-center text-black">
-                Register
-              </h5>
-              <p className="text-center text-black mb-[10px]">Already a member? <Link to={"/tutorlogin"} className="text-text-color font-medium underline">Sign in</Link> instead</p>
-            <form className="user-signup">
-              <div className="user-name flex gap-[20px]">
-                <div className="mb-2">
-                  <label htmlFor="text" className="block text-sm font-medium text-gray-700" >
-                    First Name
-                  </label>
-                  <input
-                    placeholder="Your First Name" type="text" id="first_name" name="first_name"
-                    className="mt-1 p-2 w-full rounded-md bg-white focus:outline-none" required value={firstName} 
-                    onChange={(e) => setFirstName(e.target.value)}
-                  />
-                </div>
-                <div className="mb-2">
-                  <label htmlFor="text" className="block text-sm font-medium text-gray-700" >
-                    Last Name
-                  </label>
-                  <input
-                    placeholder="Your Last name" type="text" id="last_name" name="last_name"
-                    className="mt-1 p-2 w-full rounded-md bg-white focus:outline-none" required  value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                  />
-                </div>
-              </div>
-              <div className="contact-info flex gap-[20px]">
-                <div className="mb-2">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    Email
-                  </label>
-                  <input
-                    placeholder="email@example.com" type="email" id="email" name="email"
-                    className="mt-1 p-2 w-full rounded-md bg-white focus:outline-none" required value={email} 
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <div className="mb-2">
-                  <label htmlFor="2547********" className="block text-sm font-medium text-gray-700">
-                    Phone Number
-                  </label>
-                  <input
-                    placeholder="Phone Number" type="text" id="phone_number" name="phone_number"
-                    className="mt-1 p-2 w-full rounded-md bg-white focus:outline-none" required value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                  />
-                </div>
-              </div> 
-              <div className="mb-2">
-                <div className="relative">
-                  <PasswordInput
-                    name="password" title="Password" placeholder="Password" value={password}
-                    onChange={(e) => setPassword(e.target.value)} showPassword={showPassword} onTogglePassword={() => setShowPassword(!showPassword)}
-                  />
-                </div>
-              </div>
-              <div className="mb-2">
-                <PasswordInput
-                  name="confirmPassword" title="Confirm Password" placeholder="Confirm Password" value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)} showPassword={showPassword} onTogglePassword={() => setShowPassword(!showPassword)}
-                />
-              </div>
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="create-account uppercase bg-blue-900 text-white font-semibold px-4 py-2 rounded-md hover:bg-blue-800 w-full mt-7"
-                  onClick={handleAddAccount}
-                >
-                  Register Now
-                </button>
-              </div>
-            </form>
-          </div>
+      <div className="bg-custom-gradient h-screen flex flex-col items-center justify-center">
+        <div className="w-80 h-auto flex flex-col items-center mb-8">
+          <Link to={"/"}>
+            <img src={logo} alt="Logo" className="w-[200px]" />
+          </Link>
+        </div>
+
+        <div className="signup-container w-full max-w-md p-6 bg-gradient-to-tr from-[rgba(255,255,255,0.2)] to-[rgba(255,255,255,0.2)] backdrop-blur-10xl border-[1px] border-[rgba(255,255,255,0.18)] shadow-md rounded-lg flex flex-col items-center">
+          <h5 className="text-3xl font-bold mb-4 text-center text-black">Register</h5>
+          <p className="text-center text-black mb-[10px]">
+            Already a tutor? <Link to={"/tutorlogin"} className="text-logo-blue font-medium underline">Sign in</Link> instead
+          </p>
+
+          <form className="w-full">
+            <div className="flex gap-4 mb-4">
+              <input placeholder="Your First Name" type="text" id="first_name" name="first_name"
+                className="p-2 w-full text-sm rounded-md bg-transparent focus:outline-none border-[2px] border-text-color text-text-color placeholder-text-color" 
+                required value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+              <input placeholder="Your Last Name" type="text" id="last_name" name="last_name"
+                className="p-2 w-full text-sm rounded-md bg-transparent focus:outline-none border-[2px] border-text-color text-text-color placeholder-text-color" 
+                required value={lastName} onChange={(e) => setLastName(e.target.value)} />
+            </div>
+
+            <div className="flex gap-4 mb-4">
+              <input placeholder="email@example.com" type="email" id="email" name="email"
+                className="p-2 w-full text-sm rounded-md bg-transparent focus:outline-none border-[2px] border-text-color text-text-color placeholder-text-color" 
+                required value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input placeholder="2547********" type="text" id="phone_number" name="phone_number"
+                className="p-2 w-full text-sm rounded-md bg-transparent focus:outline-none border-[2px] border-text-color text-text-color placeholder-text-color" 
+                required value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+            </div>
+            
+            <input placeholder="Username" type="text" id="username" name="username"
+              className="p-2 w-full mb-4 text-sm rounded-md bg-transparent focus:outline-none border-[2px] border-text-color text-text-color placeholder-text-color" 
+              required value={username} onChange={(e) => setUsername(e.target.value)} />
+
+            <div className="mb-4">
+              <PasswordInput name="password" placeholder="Password" value={password}
+                onChange={(e) => setPassword(e.target.value)} showPassword={showPassword} 
+                onTogglePassword={() => setShowPassword(!showPassword)}
+              />
+            </div>
+            
+            <div className="mb-4">
+              <PasswordInput name="confirmPassword" placeholder="Confirm Password" value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)} showPassword={showPassword} 
+                onTogglePassword={() => setShowPassword(!showPassword)} />
+            </div>
+            
+            <div className="text-center">
+              <button type="button"
+                className="create-account uppercase bg-dark-bg text-white font-semibold px-4 py-2 rounded-md hover:bg-hover-blue w-full mt-7"
+                onClick={handleAddAccount} > Register Now
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </>
   );
 };
 
-const PasswordInput = ({ name, title, placeholder, value, onChange, showPassword, onTogglePassword }) => {
+const PasswordInput = ({ name, placeholder, value, onChange, showPassword, onTogglePassword }) => {
   return (
-    <div className="mb-2">
-      <label htmlFor={name} className="block text-sm font-medium text-gray-700">
-        {title}
-      </label>
-      <div className="flex items-center">
-        <input
-          type={showPassword ? "text" : "password"}
-          id={name}
-          name={name}
-          className="mt-1 p-2 w-full rounded-md  focus:outline-none"
-          placeholder={placeholder}
-          required
-          value={value}
-          onChange={onChange}
-        />
-        <button
-          type="button"
-          onClick={onTogglePassword}
-          className="absolute flex flex-end ml-[380px] text-gray-600 hover:text-gray-800"
-        >
-          {showPassword ? <PiEyeBold /> : <PiEyeClosed />}
-        </button>
-      </div>
+    <div className="relative">
+      <input type={showPassword ? "text" : "password"} id={name} name={name}
+        className="p-2 w-full text-sm rounded-md bg-transparent focus:outline-none border-[2px] border-text-color text-text-color placeholder-text-color pr-10"
+        placeholder={placeholder} required value={value} onChange={onChange} />
+      <button type="button" onClick={onTogglePassword} className="absolute right-2 top-1/2 transform -translate-y-1/2 text-text-color text-[16px]" >
+        {showPassword ? <PiEyeBold /> : <PiEyeClosed />}
+      </button>
     </div>
   );
 };

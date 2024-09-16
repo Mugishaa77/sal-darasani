@@ -1,33 +1,29 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-// Pages
-import Navbar from './components/LandingPage/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/LandingPage/HomePage';
+import StudentLogin from './components/AuthComponents/StudentLogin';
+import Navbar from './components/LandingPage/Navbar';
 import FindTutor from './components/Pages/Find';
 import Become from './components/Pages/Become';
-
-// AuthComponents
 import StudentSignUp from './components/AuthComponents/StudentSignUp';
+import TutorLogin from './components/AuthComponents/TutorLogin';
+import TutorSignUp from './components/AuthComponents/TutorSignUp';
 
-import './App.css';
-
-export default function App() {
+function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        {/* Navbar component outside Routes */}
-        <Navbar />
-        
-        {/* Routes configuration */}
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/find" element={<FindTutor />} />
-          <Route path="/signup" element={<StudentSignUp />} />
-          <Route path="/become" element={<Become />} />
-          {/* Add more routes as needed */}
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <Router>
+      {/* Navbar component outside Routes */}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/studentlogin" element={<StudentLogin />} />
+        {/* Pages */}
+        <Route path="/find" element={<FindTutor />} />
+        <Route path="/become" element={<Become />} />
+        {/* Add more routes as needed */}
+      </Routes>
+    </Router>
   );
 }
+
+export default App;

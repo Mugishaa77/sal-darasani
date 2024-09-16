@@ -1,23 +1,19 @@
-import React from "react";
-import { AiOutlineCloseCircle } from 'react-icons/ai';
+import React from 'react';
+import { MdClose } from 'react-icons/md';
 
-function Modal ({ isOpen, onClose, children }) {
-  return (
-    <div className={`fixed inset-0 flex items-center justify-center z-50 ${isOpen ? "" : "hidden"}`}>
-      <div className="modal-overlay absolute w-full h-full bg-gray-900 opacity-50" />
-      <div className="modal-container bg-white w-[300px] md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto items-center">
-          <div className="text-right mt-[10px] mr-5 mb-2">
-            <button
-              className="text-blue-500 hover:text-blue-700 px-[3px] py-[5px] rounded-md text-2xl"
-              onClick={onClose}
-            >
-              <AiOutlineCloseCircle />
-            </button>
-          </div>
-        <div className="modal-content pb-[15px] font-medium text-center px-6">{children}</div>
-      </div>
-    </div>
-  );
-};
+function LoginModal({ isOpen, onClose, children }) {
+    if (!isOpen) return null;
 
-export default Modal;
+    return (
+        <div className="modal-overlay fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-30">
+            <div className="modal-container relative py-[25px] px-[20px] bg-white rounded-lg shadow-lg w-full max-w-[300px] mx-4">
+                <button onClick={onClose} className="absolute top-1 right-3 text-xl">
+                    <MdClose />
+                </button>
+                {children}
+            </div>
+        </div>
+    );
+}
+
+export default LoginModal;

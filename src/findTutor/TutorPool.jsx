@@ -1,6 +1,7 @@
 import TutorCard from "./TutorCard";
 import TutorSearchAndFilter from "./TutorSearchAndFilter";
-import NeedsFive from '../pictures/needs_five.jpeg';
+import DiversityFive from '../pictures/diversity_five.jpeg';
+
 
 export default function TutorPool () {
     return (
@@ -31,15 +32,14 @@ export default function TutorPool () {
                     </li>
                     <li>
                    
-                    <span>✔</span> Start your educational journey with confidence by selecting your
-                    preferred tutor from our extensive pool today!
+                    <span>✔</span> Withdraw your savings at any time
                     </li>
                 </ul>
                   
              </div>
 
              <div className="pool-two">
-             <img src={NeedsFive} alt=""/>
+             <img src={DiversityFive} alt=""/>
              </div>
 
              
