@@ -26,11 +26,11 @@ const Footer = () => {
                         <h5 className='font-bold text-xl mb-[20px]'>Sitemap</h5>
                         <ul>
                         
-                            <NavItem label="Home" to="home" active={activeLink === "Home"} onClick={handleLinkClick} />
-                            <NavItem label="Our Services" to="services"active={activeLink === "Featured events"} onClick={handleLinkClick} />
-                            <NavItem label="Join Us" to="join-org" active={activeLink === "Create event"} onClick={handleLinkClick} />
-                            <NavItem label="Our Partners"to="our-partners" active={activeLink === "Our clients"} onClick={handleLinkClick} />
-                            <NavItem label="Contact" to="footer" active={activeLink === "Contact"} onClick={handleLinkClick} />
+                            <NavItem label="Home" to="home" active={activeLink === "Home"} onClick={handleLinkClick} className="hover:text-logo-blue" />
+                            <NavItem label="Our Services" to="services"active={activeLink === "Featured events"} onClick={handleLinkClick} className="hover:text-logo-blue" />
+                            <NavItem label="Join Us" to="join-org" active={activeLink === "Create event"} onClick={handleLinkClick} className="hover:text-logo-blue"  />
+                            <NavItem label="Our Partners"to="our-partners" active={activeLink === "Our clients"} onClick={handleLinkClick}className="hover:text-logo-blue" />
+                            <NavItem label="Contact" to="footer" active={activeLink === "Contact"} onClick={handleLinkClick} className="hover:text-logo-blue" />
                           
                         </ul>
                     </div>

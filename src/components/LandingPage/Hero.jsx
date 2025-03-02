@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import LoginModal from './../AuthComponents/LoginModal';
 import './landing.css';
@@ -43,15 +44,18 @@ function Hero() {
                         Unlock Your Potential with Expert Guidance, Anytime, Anywhere. Join us and experience personalized learning that fits your schedule and budget.
                     </p>
                 </div>
-                <img src={heroimg} alt="" className="hero-img mt-[-60px] w-[600px] h-auto ml-[100px] mr-[20px]" />
+                <img src={heroimg} style={{objectFit: "contain"}} alt="" className="hero-img mt-[-60px] w-[450px] h-auto ml-[80px] mr-[20px]" />
             </div>
 
-           <div className="hero-buttons flex gap-[50px] mt-[-150px] ml-[60px]">
-            <button className='w-fit-content bg-dark-bg py-[10px] px-[50px] text-text-color rounded-md font-semibold hover:bg-lighter-slate'>Get Started</button>
+           <div className="hero-buttons flex gap-[50px] mt-[-50px] ml-[80px]">
+            <button className='w-fit-content bg-dark-bg py-[10px] px-[50px] text-text-color rounded-md font-semibold hover:bg-logo-blue'>
+                <Link to="/find" style={{textDecoration: "none", color: "inherit"}}>
+                Get Started</Link>
+            </button>
             
-            <button className="flex items-center rounded px-4 py-2">
-                <FaBookOpenReader className="mr-2 bg-dark-bg text-text-color rounded-full p-2 text-3xl" /> 
-                <span className="underline font-semibold text-dark-bg">Learn More</span>
+            <button className="flex items-center rounded px-4 py-2 hover:text-logo-blue">
+                <FaBookOpenReader className="mr-2 bg-dark-bg text-text-color rounded-full p-2 text-3xl hover:bg-logo-blue " /> 
+                <span className="underline font-semibold text-dark-bg hover:text-logo-blue">Learn More</span>
             </button>
            </div>
 
