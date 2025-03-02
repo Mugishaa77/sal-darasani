@@ -66,8 +66,8 @@ function JoinOrg() {
              
             </div>
           </div>
-           <div className="join-btn mb-[20px]">
-                <button className='block m-auto rounded-md bg-dark-bg px-[20px] py-[10px] font-semibold font-dm-sans text-text-color'>
+           <div className="join-btn mb-[20px]"> 
+                <button className='block m-auto rounded-md bg-dark-bg px-[20px] py-[10px] hover:bg-logo-blue font-semibold font-dm-sans text-text-color'>
                   Join the waitlist
                 </button>
            </div>

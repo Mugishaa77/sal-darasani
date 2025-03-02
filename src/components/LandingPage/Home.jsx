@@ -11,7 +11,7 @@ function Home() {
             </div>
         
             <div className="cta">
-                <button>
+                <button  >
                     <a>
                         Get Started
                     </a>

@@ -18,7 +18,7 @@ const Footer = () => {
                  
                 <div className="abt-container lg:w-[450px] sm:mb-[20px]">
                     <img src={logo} alt="Darasani Hub Logo" className='w-[280px] h-auto relative mt-[-15px] mb-[25px]  md:block md:mx-auto'/>
-                    <p className='text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis provident quis quia cupiditate, eveniet temporibus tempora excepturi? Aliquam nisi consectetur quisquam assumenda fuga itaque sit quos soluta unde.</p>
+                    <p className='text-justify'></p>
                 </div>
 
                 <div className="md:flex md:space-x-[100px] md:mt-[20px] sm:mt-[20px]">
